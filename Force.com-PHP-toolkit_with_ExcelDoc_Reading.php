@@ -8,13 +8,14 @@ require_once ('/Applications/MAMP/htdocs/Force.com-PHP-Toolkit/soapclient/Sforce
 
 $mySforceConnection2 = new SforcePartnerClient();
 $mySoapClient2 = $mySforceConnection2->createConnection("partner.wsdl.xml");
-$mylogin2 = $mySforceConnection2->login("egie.gutierrez@ip-converge.com", "qA3PefrePrur");
+$mylogin2 = $mySforceConnection2->login("your_account@your_domain", "CHANGEME");
 
 
 /** PHPExcel_IOFactory */ include 'PHPExcel/IOFactory.php';
 
+#Set this to the location of the Excel file you want to process
+$inputFileName = '/SomeHomeDir/SomeExcelFile.xls;
 
-$inputFileName = '/Applications/MAMP/htdocs/SalesForceBilling/Basewith2015schedules.xlsx';
 #$echo 'Loading file ',pathinfo($inputFileName,PATHINFO_BASENAME),' using IOFactory to identify the format<br />';
 $objPHPExcel = PHPExcel_IOFactory::load($inputFileName);
 
